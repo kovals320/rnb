@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #FBF8F4;
+  --color-ink: #2A2320;
+  --color-muted: #6B5F57;
+  --color-faint: #8A7E75;
+  --color-line: #E5DDD3;
+  --color-line-soft: #EFE8DF;
+  --color-sand: #E9E2D8;
+  --color-rose: #9E2F4E;
+  --color-rose-dark: #7A2039;
+  --color-rose-soft: #F6E3E8;
+  --color-sage: #4E6B4F;
+  --color-sage-dark: #3E5A40;
+  --color-sage-soft: #E6EEE3;
+  --color-stone: #B8ACA2;
+  --font-serif: "Frank Ruhl Libre", Georgia, serif;
+  --font-sans: "Assistant", system-ui, sans-serif;
+}
+
+html, body, #root { min-height: 100%; }
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+button, input, textarea, select { font: inherit; color: inherit; }
+input, textarea, select { font-size: 16px; }
+:focus-visible { outline: 2px solid var(--color-rose); outline-offset: 2px; }
+.pb-safe { padding-bottom: max(16px, env(safe-area-inset-bottom)); }
