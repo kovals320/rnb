@@ -9,6 +9,7 @@ import AssignmentForm from './pages/AssignmentForm'
 import Clients from './pages/Clients'
 import ClientDetail from './pages/ClientDetail'
 import Workers from './pages/Workers'
+import InstallPrompt from './components/InstallPrompt'
 
 function Gate({ children, admin = false }: { children: ReactNode; admin?: boolean }) {
   const { loading, session, profile, isAdmin, signOut } = useAuth()
@@ -45,6 +46,7 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
+      <InstallPrompt />
     </AuthProvider>
   )
 }
