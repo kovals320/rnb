@@ -85,8 +85,9 @@ export async function buildReportPdf(d: ReportData): Promise<File> {
       pdf.addImage(slice.toDataURL('image/jpeg', 0.88), 'JPEG', 0, 0, pw, (h * pw) / canvas.width)
     }
     const blob = pdf.output('blob')
-    const safe = d.client.replace(/[\\/:*?"<>|]/g, '').trim() || 'report'
-    return new File([blob], `דוח ${safe} ${d.date}.pdf`, { type: 'application/pdf' })
+    // ASCII filename: Hebrew names are dropped by some browsers/share targets. The client name is inside the PDF and in the message text.
+    const time = new Date().toTimeString().slice(0, 5).replace(':', '')
+    return new File([blob], `RoseBloom-report-${d.date}-${time}.pdf`, { type: 'application/pdf' })
   } finally {
     host.remove()
   }
