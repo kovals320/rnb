@@ -6,7 +6,7 @@ Mobile-first Hebrew (RTL) web app for scheduling the gardening team, replacing t
 - **Workers** see only their own jobs, tick a shared checklist, add notes and photos, and finish the job by sending a PDF report on WhatsApp (this marks the job as submitted).
 
 ## Stack
-- React + TypeScript + Vite + Tailwind, deployed on Vercel (`rnb.dorh.fyi`)
+- React + TypeScript + Vite + Tailwind, deployed on Vercel (`app.roseandbloom.co.il`)
 - Supabase (shared project "home"): Postgres with row-level security, auth (email + password), storage, one edge function
 - All database objects are prefixed `rnb_` — see `supabase/schema.sql`
 

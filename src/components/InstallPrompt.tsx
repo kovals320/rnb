@@ -140,7 +140,7 @@ export default function InstallPrompt() {
 
         {mode === 'ios-other' && (
           <div className="mt-3 text-[14px] text-[#D9D0C7]">
-            כדי להתקין, פתחו את <b className="text-paper">rnb.dorh.fyi</b> בדפדפן Safari ובחרו שם ״הוספה למסך הבית״.
+            כדי להתקין, פתחו את <b className="text-paper">app.roseandbloom.co.il</b> בדפדפן Safari ובחרו שם ״הוספה למסך הבית״.
             <button onClick={close} className="mt-3 w-full h-11 rounded-full border border-[#5A4F49] font-semibold text-paper">
               הבנתי
             </button>
